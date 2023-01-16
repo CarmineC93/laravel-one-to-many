@@ -10,7 +10,7 @@ class Project extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title', 'description', 'slug', 'cover_image'];
+    protected $fillable = ['type_id', 'title', 'description', 'slug', 'cover_image'];
 
     // questa funzione ci permette di gestire l'url da un solo punto
     public static function generateSlug($title)
