@@ -17,4 +17,10 @@ class Project extends Model
     {
         return Str::slug($title, '-');
     }
+
+    //nome della funzione singolare perchè più progetti possono essere in un solo tipo
+    public function type()
+    {
+        return $this->belongsTo(Type::class);
+    }
 }
