@@ -25,6 +25,16 @@
                         @enderror
                     </div>
 
+                    <div class="form-group mb-3">
+                        <label for="type">Categoria</label>
+                        <select name="type_id" id="type" class="form-select">
+                            <option value="">Nessun tipo</option>
+                            @foreach ($types as $type)
+                                <option value="{{ $type->id }}" @selected(old('type_id') == $type->id)>{{ $type->name }}
+                                </option>
+                            @endforeach
+                        </select>
+                    </div>
 
                     <div class="form-group mb-3">
                         <label for="cover_image">Immagine</label>
