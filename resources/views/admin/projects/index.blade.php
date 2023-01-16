@@ -22,6 +22,8 @@
                     <thead>
                         <tr>
                             <th scope="col">Titolo</th>
+                            <th scope="col">Tipo</th>
+
                             <th scope="col">Azioni</th>
                         </tr>
                     </thead>
@@ -29,6 +31,7 @@
                         @foreach ($projects as $project)
                             <tr>
                                 <th scope="row">{{ $project->title }}</th>
+                                <th scope="row">{{ $project->type?->name }}</th>
 
                                 <td>
                                     @if ($project->cover_image)

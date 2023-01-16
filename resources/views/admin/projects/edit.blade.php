@@ -23,11 +23,11 @@
                     </div>
 
                     <div class="form-group mt-3">
-                        <label for="type">Categoria</label>
+                        <label for="type">Tipo</label>
                         <select name="type_id" id="type" class="form-select">
                             <option value="">Nessun tipo</option>
                             @foreach ($types as $type)
-                                <option value="{{ $type->id }}" @selected($post->type?->id == $type->id)>{{ $type->name }}
+                                <option value="{{ $type->id }}" @selected($project->type?->id == $type->id)>{{ $type->name }}
                                 </option>
                             @endforeach
                         </select>

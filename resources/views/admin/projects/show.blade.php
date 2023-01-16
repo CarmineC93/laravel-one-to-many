@@ -10,7 +10,7 @@
         </div>
         <p class="mt-3">{{ $project->description }}</p>
         {{-- mettere o null safe operator o terziario che controlli che ci sia il tipo per quel progetto --}}
-        <p> {{ $project->type?->name }}</p>
+        <p style="color: red"> {{ $project->type?->name }}</p>
 
         <div class="text-center">
             @if ($project->cover_image)
